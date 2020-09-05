@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta name="description" content="Atributos de Tablas"> 
+        <meta charset="UTF-8"> 
+        <title>Atributos de Tablas</title> 
+        <link rel="stylesheet" href="estilos.css" type="text/css"> 
+    </head>
+    <body style="background-color: beige;"> 
+        <div class="menu">
+            <h3>Menu:</h3>
+            <ul>
+                <li><a href='html_1.html'>Atributos de tablas</a></li>
+                <li><a href='html_2.html'>Contactos</a></li>
+                <li><a href='html_3.html'>Documento Lorem Ipsum</a></li>
+                <li><a href='https://www.w3schools.com/'>Documentación W3 Shools</a></li>
+            </ul>
+        </div>
+        <h1>Contactos:</h1> 
+        <br>
+        <div class="card">
+            <img src="perfil.png" alt="perfil">
+            <form>
+
+                <label>Nombre: </label>
+                <input name="nombre" style="margin-right: 5px;" type="text"/>
+                <label>Apellido: </label>
+                <input name="apellido" type="text"/>
+                <fieldset style="margin: 10px; text-align: left;">
+                    <legend>Telefono: </legend>
+                    <label style="padding-left: 20px;">Cod. Area: </label>
+                    <input style="margin-right: 5px; width: 60px;" name="codArea" type="number"/>
+                    <label> - </label>
+                    <input style="width: 160px;" name="telefono" type="number"/>
+                </fieldset>
+                <label>Genero: </label>
+                <input type="radio" name="genero" value="hombre" checked> Hombre  
+                <input type="radio" name="genero" value="mujer"> Mujer  
+                <input type="radio" name="genero" value="nsnc"> NS/NC  
+                <br>               
+                <textarea name="message" rows="5" style="width: 80%;"> </textarea>
+                <br>
+                    <button id="submit" type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>
