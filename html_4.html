@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta name="description" content="Atributos de Tablas"> 
+        <meta charset="UTF-8"> 
+        <title>Adivinanza</title> 
+        <link rel="stylesheet" href="Styles.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    </head>
+
+    <nav id="menu" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="html_1.html">Atributos de tablas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html_2.html">Contactos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html_3.html">Documento Lorem Ipsum</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="https://www.w3schools.com/">Documentación W3 Shools</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="html_4.html">Adivinanza</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <body style="background-color: beige;"> 
+
+        <div class="container">
+            <button onclick="nuevo_juego()" type="button" class="btn btn-primary" style="margin-top: 30px; margin-bottom: 30px;">¡Jugar de nuevo!</button>
+            
+            <div class="jumbotron">
+                <h1 class="display-4">Adivina adivinador ¿Quién soy?...</h1>
+
+                <p id="adivinanza" class="lead"></p>
+                <hr class="my-4">
+                <p id="pista_1"></p>
+                <p id="pista_2"></p>
+
+                <!-- <button onclick="pedir_pista()" type="button" class="btn btn-info">Pista</button> -->
+
+                <div class="form-group">
+                    <label>Es...</label>
+                    <input type="text" class="form-control" id="intento_usuario">
+                </div>
+
+                <p id="intentos" class="intentos">Te quedan 3 intentos</p>
+                <button onclick="adivinar()" type="button" class="btn btn-success btn-lg btn-block">Adivinar</button>
+              </div>    
+        </div>
+
+        <script>
+            // Las adivinanzas fueron sacadas de una pagina de adivinanzas
+
+            var id_adivinanza;
+            var cant_intentos;
+            var pista_1 = document.getElementById('pista_1');
+            var pista_2 = document.getElementById('pista_2');
+            var adivinanza = document.getElementById('adivinanza');
+            var intentos = document.getElementById('intentos');
+            var intento_usuario = document.getElementById('intento_usuario');
+            
+            window.onload = function() { nuevo_juego();}
+
+            var db_adivinanzas = [
+                {
+                    adivinanza:'Cuatro hermanas gemelas dan mil vueltas paralelas. Giran, giran, siempre danzan, mas nunca jamás se alcanzan.',
+                    pista_1:'Don Quijote las confundía con los brazos de los gigantes.', 
+                    pista_2:'Antihuamente se usaba para usar la fuerza del veinto para moler la harina.', 
+                    solucion:'Las aspas del molino'
+                },
+                {
+                    adivinanza:'Tres cuevas en la montaña, en dos el aire va a entrar y la tercera el vidrio empaña.',
+                    pista_1:'Se encuentran en el rostro.', 
+                    pista_2:'Dos órganos por donde puedes respirar. (son dos)', 
+                    solucion:'La nariz y la boca'
+                },
+                {
+                    adivinanza:'Somos muchos hermanitos, en una sola casa vivimos, si nos rascan la cabeza al instante morimos.',
+                    pista_1:'Flacos y largos de pelada colorada.', 
+                    pista_2:'Con ellos consigues hacer fuego.', 
+                    solucion:'Los fósforos'
+                },
+                {
+                    adivinanza:'Se viste el cielo de luces en cascada de colores, para alegrar en la noche a los que están más tristones.',
+                    pista_1:'Suele poner fin a las fiestas de un lugar y alumbra todo el cielo de diferentes colores.', 
+                    pista_2:'Muchos dicen que incluso asusto a tus mascotas.', 
+                    solucion:'Los fuegos artificiales'
+                },
+                {
+                    adivinanza:'Todos me pisan a mí, pero yo no piso a nadie; todos preguntan por mí, yo no pregunto por nadie',
+                    pista_1:'Soy la linea que une origenes y destinos en un papel', 
+                    pista_2:'Sendero que recorren los campesinos', 
+                    solucion:'El camino'
+                },
+                {
+                    adivinanza:'Tengo raíz y no soy planta. Tengo velas pero no alumbro.',
+                    pista_1:'El primero tiene forma de anzuelo y cuando se usa, el segundo no puede navegar. (son dos)', 
+                    pista_2:'El primero es tan pesado como una piedra, pero el segundo lo es aun más, pero aun asi puede flotar. (son dos)', 
+                    solucion:'El Ancla y el Barco'
+                }
+            ];
+
+
+            function  nuevo_juego() {
+                id_adivinanza = Math.trunc(Math.random()*100%6);
+                cant_intentos = 4;
+                intentos.textContent = 'Te quedan '+ cant_intentos + ' intentos';
+                pista_1.textContent = null;
+                pista_2.textContent = null;
+                adivinanza.textContent = '"' + db_adivinanzas[id_adivinanza].adivinanza + '"';
+                intento_usuario.value = '';
+            };
+
+            function  pedir_pista() {
+                if (cant_intentos == 2) {
+                    pista_1.textContent = '"' + db_adivinanzas[id_adivinanza].pista_1 + '"';
+                }
+
+                if (cant_intentos == 1) {
+                    pista_2.textContent = '"' + db_adivinanzas[id_adivinanza].pista_2 + '"';
+                }
+            };
+
+            function  adivinar() {
+                if(intento_usuario.value.trim() == '') {
+                    intento_usuario.value = '';
+                    return;
+                }
+
+                if(intento_usuario.value.toLowerCase() == db_adivinanzas[id_adivinanza].solucion.toLowerCase()){
+                    alert('¡Victoria!... juega de nuevo');
+                    nuevo_juego();
+                } else {
+                    cant_intentos = cant_intentos - 1;
+                    
+                    pedir_pista();
+
+                    intentos.textContent = 'Te quedan '+ cant_intentos + ' intentos';
+
+                    if (cant_intentos == 0) {
+                        alert('¡Perdiste! vuelve a intentarlo');
+                        nuevo_juego();
+                    }
+                }
+            };
+
+        </script>
+    </body>
+</html>

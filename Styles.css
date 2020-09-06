@@ -26,3 +26,10 @@ img{
     border: 1px solid white;
     border-radius: 50%;
 }
+
+.intentos{
+    font-size: 12 !important;
+    margin-left: 0px !important;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
