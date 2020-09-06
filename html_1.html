@@ -1,88 +1,113 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
     <head> 
         <meta name="description" content="Atributos de Tablas"> 
         <meta charset="UTF-8"> 
         <title>Atributos de Tablas</title> 
-        <link rel="stylesheet" href="estilos.css" type="text/css"> 
+        <link rel="stylesheet" href="estilos.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
-    <body> 
-        <div class="menu">
-            <h3>Menu:</h3>
-            <ul>
-                <li><a href='html_1.html'>Atributos de tablas</a></li>
-                <li><a href='html_2.html'>Contactos</a></li>
-                <li><a href='html_3.html'>Documento Lorem Ipsum</a></li>
-                <li><a href='https://www.w3schools.com/'>Documentación W3 Shools</a></li>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="html_1.html">Atributos de tablas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html_2.html">Contactos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html_3.html">Documento Lorem Ipsum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.w3schools.com/">Documentación W3 Shools</a>
+              </li>
             </ul>
-        </div>
-        <h1>Atributos de Tablas</h1>
-        <main> 
-            <h3>Tablas: Atributos</h3> 
-            <table> 
-                <caption>
-                    <strong>Leyenda de la tabla</strong>
-                </caption> 
-                <thead> 
-                    <tr> 
-                        <th>Etiqueta</th> 
-                        <th>Descripción</th> 
-                        <th>Documentación</th> 
-                    </tr> 
-                </thead> 
-                <tbody> 
-                    <tr> 
-                        <td>&#60table&#62</td> 
-                        <td>Crea una tabla</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/table.html#the-table-element'>Documentación W3C</a></td> 
-                    </tr> 
-                    <tr> 
-                        <td>&#60caption&#62</td> 
-                        <td>Muestra información adicional sobre la tabla</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/table.html#the-caption-element'>Documentación W3C</a></td>
-                    </tr> 
-                    <tr> 
-                        <td>&#60th&#62</td> 
-                        <td>Define la cabecera de una columna</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/table.html#the-th-element'>Documentación W3C</a></td> 
-                    </tr> 
-                    <tr> 
-                        <td>&#60tr&#62</td>
-                        <td>Define la fila</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/tr.html#the-tr-element'>Documentación W3C</a></td> 
-                    </tr> 
-                    <tr> 
-                        <td>&#60td&#62</td> 
-                        <td>Determina una celda</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/td.html#the-td-element'>Documentación W3C</a></td> 
-                    </tr>
-                    <tr> 
-                        <td>&#60colgroup&#62</td> 
-                        <td>Permite la agrupación de contenido</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/colgroup.html#the-colgroup-element'>Documentación W3C</a></td> 
-                    </tr> 
-                    <tr> 
-                        <td>&#60thead&#62</td> 
-                        <td>Contenido cabecera (títulos, subtítulos, secciones, etc...)</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/thead.html#the-thead-element'>Documentación W3C</a></td> 
-                    </tr> 
-                    <tr> 
-                        <td>&#60tbody&#62</td> 
-                        <td>Contenido Principal (celdas principales, etc...)</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/tbody.html#the-tbody-element'>Documentación W3C</a></td> 
-                    </tr>
-                    <tr> 
-                        <td>&#60tfoot&#62</td> 
-                        <td>Contenido secundario (fuente, celdas secundarias, etc..)</td> 
-                        <td><a href='https://www.w3.org/TR/html-markup/multipage/tfoot.html#the-tfoot-element'>Documentación W3C</a></td> 
-                    </tr>
-                </tbody> 
-                 <tfoot> 
-                    <tr> 
-                        <td colspan="3" ><a href='https://www.w3.org/TR/html-markup/multipage/table.html'>Recomendaciones del W3C</a></td> 
-                    </tr> 
-                </tfoot> 
-            </table> 
-        </main> 
+          </div>
+      </nav>
+
+    <body style="background-color: beige;"> 
+
+          <div class="container">
+            <h1>Atributos de Tablas</h1>
+            <main> 
+
+                <h3>Tablas: Atributos</h3> 
+                <table class="table table-striped"> 
+                    <caption>
+                        <strong style="padding-left: 10px;">Leyenda de la tabla</strong>
+                    </caption> 
+                    <thead class="thead-dark"> 
+                        <tr> 
+                            <th scope="col">Etiqueta</th> 
+                            <th scope="col">Descripción</th> 
+                            <th scope="col">Documentación</th> 
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                        <tr scope="row"> 
+                            <td>&#60table&#62</td> 
+                            <td>Crea una tabla</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/table.html#the-table-element'>Documentación W3C</a></td> 
+                        </tr> 
+                        <tr scope="row"> 
+                            <td>&#60caption&#62</td> 
+                            <td>Muestra información adicional sobre la tabla</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/table.html#the-caption-element'>Documentación W3C</a></td>
+                        </tr> 
+                        <tr scope="row"> 
+                            <td>&#60th&#62</td> 
+                            <td>Define la cabecera de una columna</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/table.html#the-th-element'>Documentación W3C</a></td> 
+                        </tr> 
+                        <tr scope="row"> 
+                            <td>&#60tr&#62</td>
+                            <td>Define la fila</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/tr.html#the-tr-element'>Documentación W3C</a></td> 
+                        </tr> 
+                        <tr scope="row"> 
+                            <td>&#60td&#62</td> 
+                            <td>Determina una celda</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/td.html#the-td-element'>Documentación W3C</a></td> 
+                        </tr>
+                        <tr scope="row"> 
+                            <td>&#60colgroup&#62</td> 
+                            <td>Permite la agrupación de contenido</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/colgroup.html#the-colgroup-element'>Documentación W3C</a></td> 
+                        </tr> 
+                        <tr scope="row"> 
+                            <td>&#60thead&#62</td> 
+                            <td>Contenido cabecera (títulos, subtítulos, secciones, etc...)</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/thead.html#the-thead-element'>Documentación W3C</a></td> 
+                        </tr> 
+                        <tr> 
+                            <td>&#60tbody&#62</td> 
+                            <td>Contenido Principal (celdas principales, etc...)</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/tbody.html#the-tbody-element'>Documentación W3C</a></td> 
+                        </tr>
+                        <tr scope="row"> 
+                            <td>&#60tfoot&#62</td> 
+                            <td>Contenido secundario (fuente, celdas secundarias, etc..)</td> 
+                            <td><a href='https://www.w3.org/TR/html-markup/multipage/tfoot.html#the-tfoot-element'>Documentación W3C</a></td> 
+                        </tr>
+                    </tbody> 
+                     <tfoot> 
+                        <tr scope="row"> 
+                            <td colspan="3" ><a href='https://www.w3.org/TR/html-markup/multipage/table.html'>Recomendaciones del W3C</a></td> 
+                        </tr> 
+                    </tfoot> 
+                </table> 
+            </main> 
+            </div>
     </body> 
 </html>

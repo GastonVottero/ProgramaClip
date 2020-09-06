@@ -1,47 +1,86 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
     <head> 
         <meta name="description" content="Atributos de Tablas"> 
         <meta charset="UTF-8"> 
         <title>Contactos</title> 
-        <link rel="stylesheet" href="estilos.css" type="text/css"> 
+        <link rel="stylesheet" href="estilos.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
-    <body style="background-color: beige;"> 
-        <div class="menu">
-            <h3>Menu:</h3>
-            <ul>
-                <li><a href='html_1.html'>Atributos de tablas</a></li>
-                <li><a href='html_2.html'>Contactos</a></li>
-                <li><a href='html_3.html'>Documento Lorem Ipsum</a></li>
-                <li><a href='https://www.w3schools.com/'>Documentación W3 Shools</a></li>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="html_1.html">Atributos de tablas</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="html_2.html">Contactos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html_3.html">Documento Lorem Ipsum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.w3schools.com/">Documentación W3 Shools</a>
+              </li>
             </ul>
-        </div>
-        <h1>Contactos:</h1> 
-        <br>
-        <div class="card">
-            <img src="perfil.png" alt="perfil">
-            <form>
+          </div>
+    </nav>
 
-                <label>Nombre: </label>
-                <input name="nombre" style="margin-right: 5px;" type="text"/>
-                <label>Apellido: </label>
-                <input name="apellido" type="text"/>
-                <fieldset style="margin: 10px; text-align: left;">
-                    <legend>Telefono: </legend>
-                    <label style="padding-left: 20px;">Cod. Area: </label>
-                    <input style="margin-right: 5px; width: 60px;" name="codArea" type="number"/>
-                    <label> - </label>
-                    <input style="width: 160px;" name="telefono" type="number"/>
-                </fieldset>
-                <label>Genero: </label>
-                <input type="radio" name="genero" value="hombre" checked> Hombre  
-                <input type="radio" name="genero" value="mujer"> Mujer  
-                <input type="radio" name="genero" value="nsnc"> NS/NC  
-                <br>               
-                <textarea name="message" rows="5" style="width: 80%;"> </textarea>
-                <br>
-                    <button id="submit" type="submit">Enviar</button>
-            </form>
+    <body style="background-color: beige;"> 
+
+
+          <div class="container">
+
+            <h1>Contactos:</h1> 
+            <br>
+            <div class="jumbotron">
+                    <img src="perfil.png" alt="perfil">
+                    <form>
+                        <div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                                </div>
+                                <input name="nombre" type="text" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+        
+        
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+                                </div>
+                                <input name="apellido" type="text" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+        
+        
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Mail</span>
+                                </div>
+                                <input name="mail" type="email" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+        
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Mensaje</span>
+                                </div>
+                                <textarea class="form-control" aria-label="With textarea" required></textarea>
+                            </div>
+    
+                            <button style="margin-top: 15px;" class="btn btn-success" type="submit">Enviar</button>
+                        </div>
+                    </form>
+            </div>
         </div>
     </body>
 </html>
